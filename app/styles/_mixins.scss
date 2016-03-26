@@ -1,0 +1,28 @@
+@mixin box-sizing ($sizing) {
+  -webkit-box-sizing: $sizing;
+  -moz-box-sizing: $sizing;
+  box-sizing: $sizing;
+}
+
+@mixin text-size-adjust($adjust) {
+  -webkit-text-size-adjust: $adjust;
+  -moz-text-size-adjust: $adjust;
+  text-size-adjust: $adjust;
+}
+
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  transition: $transition;
+}
+
+@mixin gradient($start, $end) {
+  background: -webkit-gradient(linear, left top, left bottom, from($start), to($end));
+  background: -moz-linear-gradient(top, $start, $end);
+  //filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='$start', endColorstr='$end');
+}
+
+@mixin ie7icon($inner) {
+  *zoom: expression(this.runtimeStyle['zoom']='1', this.innerHTML='#{$inner}');
+}

@@ -1,0 +1,288 @@
+@charset "utf-8";
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.1)
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.1)
+}
+
+::-webkit-scrollbar-thumb:hover {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.2)
+}
+
+##{$namespace} {
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  min-width: 1000px;
+  @include text-size-adjust(none);
+}
+
+html {}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  font-weight: 300;
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  display: -webkit-box;
+  position: relative;
+  -webkit-touch-callout: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+}
+
+article,
+aside,
+blockquote,
+body,
+button,
+code,
+dd,
+details,
+div,
+dl,
+dt,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hr,
+input,
+legend,
+li,
+menu,
+nav,
+ol,
+p,
+pre,
+section,
+td,
+textarea,
+th,
+ul {
+  margin: 0;
+  padding: 0
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+  display: block
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-size: $fontSize;
+}
+
+:focus {
+  outline: 0
+}
+
+.clear {
+  clear: both
+}
+
+.clearfix:after,
+.cont:after,
+.container:after,
+.title:after,
+body:after,
+html:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0
+}
+
+.clearfix {
+  zoom: 1
+}
+
+.hide {
+  display: none
+}
+
+.block,
+.show {
+  display: block
+}
+.orange{
+  color: $colorOragle;
+}
+.inline {
+  display: inline
+}
+
+.left {
+  float: left !important
+}
+
+.right {
+  float: right !important
+}
+
+.pointer {
+  cursor: pointer;
+  color: nth($linkColor, 1);
+  &:hover {
+    color: nth($linkColor, 2);
+    text-decoration: underline;
+  }
+}
+
+.underline {
+  text-decoration: underline
+}
+
+.relative {
+  position: relative;
+}
+
+.bold {
+  font-weight: $fontBold;
+}
+
+.center {
+  text-align: center
+}
+
+.noborder {
+  border: none !important
+}
+
+.ime-disabled {
+  ime-mode: disabled !important
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+// 加载动画
+#loading{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 150px;
+  width: 150px;
+  margin-top: -75px;
+  margin-left: -75px;
+}
+.move {
+  cursor: move;
+}
+#loading .object {
+  width: 20px;
+  height: 20px;
+  background-color: lighten($colorOragle, 20%);
+  float: left;
+  margin-right: 20px;
+  margin-top: 65px;
+  -moz-border-radius: 50% 50% 50% 50%;
+  -webkit-border-radius: 50% 50% 50% 50%;
+  border-radius: 50% 50% 50% 50%;
+}
+
+#loading #object_one {
+  -webkit-animation: object_one 1.5s infinite;
+  animation: object_one 1.5s infinite;
+}
+
+#loading #object_two {
+  -webkit-animation: object_two 1.5s infinite;
+  animation: object_two 1.5s infinite;
+  -webkit-animation-delay: 0.25s;
+  animation-delay: 0.25s;
+}
+
+#loading #object_three {
+  -webkit-animation: object_three 1.5s infinite;
+  animation: object_three 1.5s infinite;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+@-webkit-keyframes object_one {
+  75% {
+    -webkit-transform: scale(0);
+  }
+}
+
+@keyframes object_one {
+  75% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+}
+
+@-webkit-keyframes object_two {
+  75% {
+    -webkit-transform: scale(0);
+  }
+}
+
+@keyframes object_two {
+  75% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+}
+
+@-webkit-keyframes object_three {
+  75% {
+    -webkit-transform: scale(0);
+  }
+}
+
+@keyframes object_three {
+  75% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+}
